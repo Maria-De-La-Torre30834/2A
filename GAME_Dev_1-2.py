@@ -13,13 +13,13 @@ GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 
 #PLAYER CLASS
-class Player(pygame.sprite.sprite):
-    def _init_(self):
-        pygame.sprite.sprite._init_(slef)
-        slef.image = pygame.Surface((50, 50))
-        slefe.omage.fill(GREEN)
-        slef.rect = slef.image.get_rect()
-        slef.rect.center = (WIDTH / 2, HEIGHT / 2)
+class Player(pygame.sprite.Sprite):
+    def __init__(self):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.Surface((50, 50))
+        self.image.fill(GREEN)
+        self.rect = self.image.get_rect()
+        self.rect.center = (WIDTH / 2, HEIGHT / 2)
 
     def update(self):
         self.rect.x += 5
